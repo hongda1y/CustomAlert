@@ -89,11 +89,10 @@ public struct AlertButtonStyle: ButtonStyle {
             }
 
             // Fallback
-            guard let color = window?.tintColor else {
-                return .accentColor
+            if let color = window?.tintColor {
+                return Color(uiColor: color)
             }
-
-            return Color(uiColor: color)
+            return Color.accentColor
         } else {
             return Color("Disabled", bundle: .module)
         }

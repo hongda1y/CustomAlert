@@ -33,20 +33,20 @@ struct BackgroundView: View {
                 if let color {
                     ZStack {
                         color
-                        BlurView(style: .systemMaterial)
+                        BlurView(style: .regular)
                     }
                 } else {
-                    BlurView(style: .systemMaterial)
+                    BlurView(style: .regular)
                 }
             }
             #else
             if let color {
                 ZStack {
                     color
-                    BlurView(style: .systemMaterial)
+                    BlurView(style: .regular)
                 }
             } else {
-                BlurView(style: .systemMaterial)
+                BlurView(style: .regular)
             }
             #endif
         }

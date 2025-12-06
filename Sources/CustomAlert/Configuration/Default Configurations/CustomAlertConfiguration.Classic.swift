@@ -30,7 +30,7 @@ extension CustomAlertConfiguration.Alert {
     /// The default configuration for a classic alert
     nonisolated public static var classic: CustomAlertConfiguration.Alert {
         CustomAlertConfiguration.Alert(
-            background: .blurEffect(.systemThinMaterial),
+            background: .blurEffect(.thinMaterial),
             dividerVisibility: .visible,
             cornerRadius: 13.3333,
             padding: .dynamic { state in

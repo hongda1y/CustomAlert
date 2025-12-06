@@ -12,9 +12,9 @@ extension CustomAlertConfiguration {
     /// A configuration value that gets calculated by the alert's state
     enum Value<Value>: Sendable where Value: Sendable {
         /// A static value applies to all possible states
-        case `static`(Value)
+        case `static`(_ value: Value)
         /// A dynamic values changes depending on the given state
-        case dynamic(@Sendable (CustomAlertState) -> Value)
+        case dynamic(@Sendable (_ calculate: CustomAlertState) -> Value)
 
         func callAsFunction() -> Value {
             callAsFunction(.default)

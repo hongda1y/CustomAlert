@@ -11,7 +11,9 @@ extension Color {
     static var almostClear: Color {
         Color.black.opacity(0.0001)
     }
+}
 
+extension Color {
     static var liquidGlassBackgroundColor: Color {
         Color(uiColor: .liquidGlassBackgroundColor)
     }
