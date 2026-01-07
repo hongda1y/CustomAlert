@@ -1,5 +1,5 @@
 //
-//  Button.swift
+//  Action.swift
 //  CustomAlert
 //
 //  Created by David Walter on 05.10.25.
@@ -8,7 +8,9 @@
 import SwiftUI
 
 /// A control that initiates a custom alert action.
-@MainActor public struct Button: View {
+public typealias Button = Action
+/// A control that initiates a custom alert action.
+@MainActor public struct Action: View {
     @Environment(\.alertDismiss) private var alertDismiss
     @Environment(\.isEnabled) private var isEnabled
 
@@ -64,7 +66,7 @@ import SwiftUI
 
 // MARK: - Some View
 
-extension Button {
+extension Action {
     /// Creates a button that displays a custom label.
     ///
     /// - Parameters:
@@ -85,7 +87,7 @@ extension Button {
 
 // MARK: - Text
 
-extension Button {
+extension Action {
     /// Creates a button with a specified role that generates its label from a localized string key.
     ///
     /// - Parameters:
@@ -141,7 +143,7 @@ extension Button {
 
 // MARK: - Label
 
-extension Button {
+extension Action {
     /// Creates a button with a specified role that generates its label from a localized string key and a system image.
     ///
     /// - Parameters:

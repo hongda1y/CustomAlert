@@ -14,11 +14,19 @@ import SwiftUI
 @resultBuilder
 public enum ActionBuilder {
     public static func buildExpression(_ expression: Button) -> [CustomAlertAction] {
-        [.button(expression)]
+        [.view(expression)]
     }
 
-    public static func buildExpression(_ expression: MultiButton) -> [CustomAlertAction] {
-        [.multiButton(expression)]
+    public static func buildExpression(_ expression: [Button]) -> [CustomAlertAction] {
+        [.viewThatFits(expression)]
+    }
+
+    public static func buildExpression(_ expression: ActionHStack) -> [CustomAlertAction] {
+        [.hstack(expression)]
+    }
+
+    public static func buildExpression(_ expression: ActionVStack) -> [CustomAlertAction] {
+        [.vstack(expression)]
     }
 
     // MARK: buildBlock

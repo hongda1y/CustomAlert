@@ -199,7 +199,7 @@ extension CustomAlertSection where Header == EmptyView {
             Text("Hello World")
                 .padding()
         } actions: {
-            MultiButton {
+            ActionHStack {
                 Button(role: .cancel) {
                     isPresented = false
                     print("Cancel")
