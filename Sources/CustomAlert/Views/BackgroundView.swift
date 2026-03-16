@@ -26,7 +26,7 @@ struct BackgroundView: View {
         case .anyView(let view):
             view
         case .glass(let color):
-            #if swift(>=6.2) && !os(visionOS)
+            #if !os(visionOS)
             if #available(iOS 26.0, *) {
                 Color.clear.glassEffect(.regular.tint(color), in: RoundedRectangle(cornerRadius: configuration.alert.cornerRadius))
             } else {
